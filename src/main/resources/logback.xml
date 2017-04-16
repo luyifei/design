@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%date{yyyy-MM-dd HH:mm:ss:SSS} [%thread] %level %logger{36} %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>D:/logs/WebCrawler.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>D:/logs/WebCrawler-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<maxHistory>10</maxHistory>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>100MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%date{yyyy-MM-dd HH:mm:ss:SSS} [%thread] %level %logger{36} %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- project default level -->
+	<logger name="com.sobet.lottery" level="INFO" />
+
+	<!--log4jdbc -->
+	<logger name="jdbc.sqltiming" level="INFO"/>
+
+	<root level="INFO">
+<!-- 		<appender-ref ref="console" /> -->
+		<appender-ref ref="rollingFile" />
+	</root>
+</configuration>
