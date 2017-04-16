@@ -1,10 +1,10 @@
-package com.design.proxy.dynamicV2;
+package com.design.proxy.dynamicV3;
 
 public class RealSubject implements Subject {
-	//业务操作
+
     @Override
     public void doSomething() {
-        System.out.println("doing...");
+        System.out.println("业务处理...");
     }
 
 }
