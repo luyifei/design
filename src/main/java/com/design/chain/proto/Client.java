@@ -1,5 +1,10 @@
 package com.design.chain.proto;
 
+/**
+ * 责任链模式
+ * @author User
+ *
+ */
 public class Client {
     public static void main(String[] args) {
         Request request = new Request();
