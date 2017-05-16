@@ -14,6 +14,9 @@ public class Client {
         root.add(branch);
         branch.add(leaf);
         display(root);
+        
+        Integer d = Integer.valueOf(String.valueOf("1"));
+        System.out.println(d);
     }
 
     private static void display(Component component) {
