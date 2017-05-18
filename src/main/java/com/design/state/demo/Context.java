@@ -10,6 +10,7 @@ public class Context {
 
     public Context(LiftState liftState) {
         this.liftState = liftState;
+        this.liftState.setContext(this);
     }
 
     public LiftState getLiftState() {
@@ -18,6 +19,7 @@ public class Context {
 
     public void setLiftState(LiftState liftState) {
         this.liftState = liftState;
+        this.liftState.setContext(this);
     }
 
     public void close() {
