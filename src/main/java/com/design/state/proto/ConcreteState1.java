@@ -16,7 +16,7 @@ public class ConcreteState1 extends State {
 
     @Override
     public void doSomething2() {
-        // 转化到下个状态能够处理的逻辑
+        // 过渡到下个状态能够处理的逻辑
         this.context.setState(Context.concreteState2);
         this.context.doSomething2();
     }

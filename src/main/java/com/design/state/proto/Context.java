@@ -20,6 +20,7 @@ public class Context {
 
     public void setState(State state) {
         this.state = state;
+        //把当前的环境通知到各个实现类中
         this.state.setContext(this);
     }
 
